@@ -36,3 +36,20 @@ export const loginCustomer = async (userId) => {
         console.log(err)
     }
 }
+export const loginAgent = async (userId) => {
+    try {
+        const response = await fetch(`${api}/user/loginagent`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ agentId: userId })
+        })
+        const result = await response.json();
+        return result;
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
