@@ -20,7 +20,6 @@ const ChatProvider = ({ children }) => {
   setAgent(agentInfo);
 
     if (!userInfo) navigate("/");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
